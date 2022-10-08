@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rehber Uygulaması</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./skeleton/normalize.css">
+    <link rel="stylesheet" href="./skeleton/skeleton.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Rehber Uygulaması</h1>
+
+        <div class="bilgi">Başarılı</div>
+        
+
+        <form id="form-rehber">
+            <div>
+                <label for="ad">Adı</label>
+                <input type="text" id="ad" class="u-full-width">
+            </div>
+            <div>
+                <label for="soyad">Soyad</label>
+                <input type="text" id="soyad" class="u-full-width">
+            </div>
+            <div>
+                <label for="mail">Email</label>
+                <input type="text" id="mail" class="u-full-width">
+            </div>
+            <div>
+                <input  class="button-primary u-full-width kaydetGuncelle" type="submit" value="Kaydet">
+            </div>
+        </form>
+
+        <hr>
+
+        <table class="u-full-width">
+            <thead>
+                <tr>
+                    <th>Ad</th>
+                    <th>Soyad</th>
+                    <th>Email</th>
+                    <th>Islem</th>
+                </tr>
+            </thead>
+            <tbody class="kisi-listesi">
+                
+             
+            </tbody>
+        </table>
+
+
+    </div>
+    <script src="RehberUygulaması.js"></script>
+</body>
+</html>

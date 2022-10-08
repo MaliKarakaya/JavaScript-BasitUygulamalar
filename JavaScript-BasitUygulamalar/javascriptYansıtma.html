@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Başlık</title>
+	<style>
+		div{
+			margin: 20px;
+			padding: 20px;
+			border: 1px solid;
+			width: 900px;
+			height: 400px;
+			font-size: 40px;
+		}
+	</style>
+</head>
+<body>
+<p>Input text içerisine her yazılanı anlık olarak div içerisine atan yazılım ...</p>
+    <input type="text" id="yazi" value="" onkeyup="Yaz();" >
+	<p>Aşağıdaki 900x400 div var. </p>
+    <div id="kutu"></div>
+</body>
+<script>
+function Yaz(){
+    document.getElementById('kutu').innerHTML = document.getElementById('yazi').value;
+}
+
+</script>
+</html>

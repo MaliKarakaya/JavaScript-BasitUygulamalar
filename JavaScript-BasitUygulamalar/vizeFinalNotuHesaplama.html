@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title></title>
+    <style>
+        input {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <label for="vize">Vize Notu</label><br>
+    <input type="number" id="vize" min="0" max="100"><br>
+    <label for="final">Final Notu</label><br>
+    <input type="number" id="final" min="0" max="100"><br>
+    <input type="number" id="sonuc" readonly><br>
+    <input type="button" onclick="hesapla()" value="HESAPLA">
+    <script>
+        function hesapla() {
+            var vize = document.getElementById('vize').value;
+            var final = document.getElementById('final').value;
+            if (vize > 100 || final > 100) {
+                var hata = window.confirm("Notu yanlış yazdınız. Devam etmek istiyor musunuz ?");
+                if (!hata) {
+                    return;
+                }
+            }
+            var ort = vize * 0.4 + final * 0.6;
+            document.getElementById('sonuc').value = ort;
+
+            if (ort < 50) {
+                color = "red";
+            }else{
+                color = "green";
+            }
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>8.ders</title>
+        <style type="text/css">
+        .class1{
+            width:300px;
+            height: 100px;
+            background:#AAA;
+            color: #f00;
+            border:2px double #Fa0;
+            padding:20px;
+        }
+        .yeni
+        {
+            margin: 20px;
+            background: #Faa;
+            color:#ff0;
+            border:3px double #FF0;
+            padding:5px;
+        }
+
+
+        
+
+        </style>
+        <script>
+        function degistir(){
+            document.getElementById("bir").classList.add("yeni");
+        }
+        function eski(){
+            document.getElementById("bir").classList.remove("yeni");
+
+            //add class özelliği verilen bir elemente yeni bir class özelliği ekler
+            //remove:var olan class özelliğini siler
+            //toggle: başka bir class özelliğine geçiş yapar
+            //kullanımı
+            //  document.getElementById("element id si").classList......add 
+        }
+        </script>
+        
+    </head>
+    <body>
+          <div id="bir" class="class1">var olan içeriğimiz</br>
+            <input type="button" value="eski" onclick="eski()"/>
+          <input type="button" value="Değiştir" onclick="degistir()"/></div>
+
+    </body>
+</html>

@@ -1,0 +1,108 @@
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>6.ders</title>
+    <style type="text/css">
+        *
+        {
+            font-size:10px;
+            font-family:Verdana;
+        }
+    </style>
+    <script type="text/javascript">
+
+        function temizle() {
+            document.getElementById("bir").style.background = "#fff";
+            document.getElementById("iki").style.background = "#fff";
+            document.getElementById("uc").style.background = "#fff";
+            document.getElementById("dort").style.background = "#fff";
+            document.getElementById("bes").style.background = "#fff";
+            document.getElementById("alti").style.background = "#fff";
+            
+        }
+        function hesapla() {
+            var kilo = Number(document.getElementById("kilo").value);
+            var boy = Number(document.getElementById("boy").value) / 100;
+            var bekiendeks = kilo / (boy * boy);
+            document.getElementById("bki").value = bekiendeks.toString();
+
+            if (kilo<0 && boy>0){
+                var bekiendeks=kilo /(boy*boy);
+                 document.getElementById("bki").value=bekiendeks.toString();
+                 
+
+            if (bekiendeks < 18.5) document.getElementById("bir").style.background = "#ccff00";
+               
+            
+            else if (bekiendeks >= 18.5 && bekiendeks < 24.9)  document.getElementById("iki").style.background = "#cccc33";
+                
+            
+            else if (bekiendeks >= 25 && bekiendeks < 29.9) document.getElementById("uc").style.background = "#ff6666";
+               
+            
+            else if (bekiendeks >= 30 && bekiendeks < 34.9) document.getElementById("dort").style.background = "#ff3300";
+                
+            
+            else if (bekiendeks >= 35 && bekiendeks < 39.9) document.getElementById("bes").style.background = "#ff0033";
+                
+            
+            else if (bekiendeks >= 40)  document.getElementById("alti").style.background = "#ff0000";
+            }
+           
+            
+            
+        }
+    </script>
+</head>
+<body>
+<table border="1" cellpadding="5">
+    <tr>
+        <td align="center"colspan="2"><b>Beden Kitle İndeksi Hesaplama</b></td>
+    </tr>
+    <tr>
+        <td>Kilonuz:</td>
+        <td><input type="text" id="kilo" size="20"   onfocus="temizle()" />Kg</td>
+    </tr>
+    <tr>
+        <td>Boyunuz</td>
+        <td><input type="text" id="boy" size="20"  onclick="temizle()"/>Cm</td>
+    </tr>
+    <tr>
+        <td align="center"colspan="2"><input type="button" onclick="hesapla()" value="Beden Kitle İndeksi Hesapla" />
+        <input type="button" value="Temizle" />
+        </td>
+    </tr>
+    <tr>
+        <td>BKİ</td>
+        <td><input type="text" id="bki" size="25" />Kg/mxm</td>
+    </tr>
+    <tr id="bir">
+    <td>18.5Kg/mxm nin altındaysa</td>
+    <td>Zayıf</td>
+    </tr>
+    <tr id="iki">
+    <td>18.5 -24.9Kg/mxm Arasındaysa</td>
+    <td>Normal Kilolu</td>
+    </tr>
+    <tr id="uc">
+    <td>25 -29.9Kg/mxm Arasındaysa</td>
+    <td>Fazla Kilolu</td>
+    </tr>
+     <tr id="dort">
+    <td>30 -34.9Kg/mxm Arasındaysa</td>
+    <td>I.Derece Obez</td>
+    </tr>
+    <tr id="bes">
+    <td>35 -39.9Kg/mxm Arasındaysa</td>
+    <td>II.Derece Obez</td>
+    </tr>
+     <tr id="alti">
+    <td>40.0Kg/mxm nin üzeri</td>
+    <td>III.Derece Morbid Obez</td>
+    </tr>
+
+</table>
+
+</body>
+</html>

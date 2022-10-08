@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #sonuc {
+            width: 100%;
+            height: 100%;
+            background-color: rgb(243, 243, 243)
+        }
+
+        div {
+            width: 50px;
+            height: 50px;
+            float: left;
+            border:#CCC solid 1px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="sonuc"></div>
+
+    <script>
+        for (var i = 0; i <= 100; i++) {
+            document.getElementById('sonuc').innerHTML += '<div id="web'+i+'">'+i+'</div>';
+            
+            /*document.getElementById('sonuc').innerHTML += '<div id="div'+i+'">'+i+'</div>';*/
+            if(i%2==0){
+                document.getElementById('web'+i).style.backgroundColor = "red";
+            }else{
+                document.getElementById('web'+i).style.backgroundColor = "blue";
+            }
+        }
+    </script>
+</body>
+
+</html>

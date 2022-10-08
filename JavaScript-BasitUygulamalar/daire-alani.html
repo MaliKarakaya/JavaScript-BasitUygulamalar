@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <style>
+        .circle {
+            background: red;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 90px;
+            vertical-align: middle;
+            color: aliceblue;
+            transition: width 0.2s;
+        }
+    </style>
+</head>
+
+<body>
+    <input id="cap" style="margin-bottom: 20px;" type="number" step="100" min="100" max="900" value="100"
+        onchange="daireBuyut(this.value)">
+    <div id="daire" class="circle">asdasd</div>
+
+    <script>
+        const PI = 3.14;
+        cap = document.getElementById('cap');
+        daire = document.getElementById('daire');
+
+        document.addEventListener("DOMContentLoaded", function () {
+            daire.style.backgroundColor = 'blue';
+            daire.style.width = cap.value + "px";
+            daire.style.height = cap.value + "px";
+            alanHesapla(cap.value);
+        });
+
+        function daireBuyut(boyut) {
+            daire.style.width = boyut + "px";
+            daire.style.height = boyut + "px";
+            alanHesapla(boyut);
+        }
+
+        function alanHesapla(cap) {
+            alan = PI * ((cap/2)*(cap/2));
+            daire.innerText = "ALAN: "+alan;
+        }
+    </script>
+</body>
+
+</html>

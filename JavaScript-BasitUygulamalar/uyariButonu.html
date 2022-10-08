@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>9.ders</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+.btn
+{
+	position:fixed;
+	top:20px;
+	left:30px;
+	width:100px;
+	height:60px;
+	padding:10px;
+	background:#C96;
+	color:#009;
+	border-radius:5px;
+}
+.btn:hover,.btn:focus
+{
+	background:#069;
+	color:#FFF;
+}
+div{
+width:2500px;
+height:2000px;
+}
+</style>
+<script>
+function degistir(){
+window.scrollBy(40,40);
+alert("Yatay Koordinatı:"+window.pageXOffset+
+" Dikey Koordinatı:"+window.pageYOffset);
+}
+
+</script>
+</head>
+<body>
+<div>
+</div>
+<button class="btn"  onClick="degistir()">Tıklayın</button>
+
+
+
+</body>
+</html>
